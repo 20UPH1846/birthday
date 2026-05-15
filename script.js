@@ -108,7 +108,9 @@ let done = false;
 function boom() {
   if (done) return;
   done = true;
-  document.getElementById('smsg').style.display = 'block';
+  const smsg = document.getElementById('smsg');
+  smsg.style.display = 'block';
+  smsg.style.animation = 'popIn 0.6s cubic-bezier(.36,.07,.19,.97)';
   for (let i = 0; i < 24; i++) setTimeout(spawnP, i * 65);
   for (let i = 0; i < 5; i++) {
     setTimeout(() => shoots.push({
