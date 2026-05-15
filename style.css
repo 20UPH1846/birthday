@@ -215,44 +215,53 @@ canvas#sc {
 
 /* ── Button ── */
 .btn {
-  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  background: linear-gradient(135deg, #f0abfc, #c084fc, #a855f7);
   color: #fff;
-  border: none;
-  padding: 0.9rem 2.5rem;
+  border: 2px solid #e879f9;
+  padding: 1rem 3rem;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
   cursor: pointer;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 22px #a855f766;
+  letter-spacing: 2px;
+  box-shadow: 0 0 24px #e879f9aa, 0 0 48px #a855f755;
   transition: transform 0.2s, box-shadow 0.2s;
-  margin-bottom: 1rem;
+  margin: 1.5rem auto 1rem;
+  display: block;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  animation: btnGlow 2s ease-in-out infinite;
+}
+
+@keyframes btnGlow {
+  0%, 100% { box-shadow: 0 0 24px #e879f9aa, 0 0 48px #a855f755; }
+  50%       { box-shadow: 0 0 40px #f0abfccc, 0 0 80px #c084fc88; }
 }
 
 .btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 32px #a855f799;
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 50px #f0abfccc, 0 0 90px #a855f799;
 }
 
 /* ── Surprise Message ── */
 .surprise-msg {
   display: none;
-  background: rgba(124, 58, 237, 0.15);
-  border: 1px solid rgba(168, 85, 247, 0.4);
+  background: rgba(124, 58, 237, 0.25);
+  border: 1.5px solid #c084fc;
   border-radius: 16px;
-  padding: 1.2rem 1.5rem;
+  padding: 1.4rem 1.6rem;
   font-family: 'Tiro Tamil', serif;
-  color: #e9d5ff;
-  font-size: 1rem;
-  line-height: 2.2;
+  color: #f3e8ff;
+  font-size: 1.05rem;
+  line-height: 2.3;
   font-style: italic;
-  animation: popIn 0.5s cubic-bezier(.36, .07, .19, .97);
-  margin-top: 0.4rem;
+  margin-top: 0.8rem;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
 }
 
 .surprise-msg strong {
-  color: #c084fc;
+  color: #f0abfc;
+  font-style: normal;
 }
 
 @keyframes popIn {
