@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sabari Priya 🌌</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Tiro+Tamil:ital@0;1&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="sc"></canvas>
+<div class="floaties" id="floaties"></div>
+
+<div id="wrap">
+  <div class="content">
+
+    <div class="orb" onclick="boom()">🌌</div>
+
+    <div class="from-tag">
+      ✦ தங்கச்சியிடமிருந்து அக்காவுக்கு ✦
+    </div>
+
+    <div class="name">சபரி பிரியா</div>
+
+    <div class="namesub">
+      விண்வெளி கவிதைகள் — என் அன்பு அக்காவுக்கு 🌌
+    </div>
+
+    <div class="divider">⭐ 💫 ✨ 🌟 🌠</div>
+
+    <div class="poem-tabs">
+      <button class="ptab active" onclick="showKav(0,this)">கவிதை ௧</button>
+      <button class="ptab" onclick="showKav(1,this)">கவிதை ௨</button>
+      <button class="ptab" onclick="showKav(2,this)">கவிதை ௩</button>
+      <button class="ptab" onclick="showKav(3,this)">கவிதை ௪</button>
+    </div>
+
+    <div class="kavithai-card">
+
+      <!-- Poem 1 -->
+      <div class="kav show" id="kav0">
+        <div class="kavithai-line">
+          பிரபஞ்சம் முழுவதும் தேடினேன்,<br>
+          <span class="hl">என் அக்காவைப் போல் யாரும் இல்லை!</span><br><br>
+
+          கோடி நட்சத்திரங்கள் இருந்தாலும்
+          உன் அன்பின் வெளிச்சம் தனி தான் அக்கா —<br>
+
+          <span class="hl">நீ என் வாழ்வின் சூரியன்,</span><br>
+
+          <span class="hl">என்றும் அணையாத ஒளி!</span> 🌟
+        </div>
+
+        <div class="kavithai-sign">
+          — உன் தங்கச்சி, அன்போடு 💜
+        </div>
+      </div>
+
+      <!-- Poem 2 -->
+      <div class="kav" id="kav1">
+        <div class="kavithai-line">
+          விண்மீன்கள் கண்ணை மூடும் விடியலில்,<br>
+
+          <span class="hl">உன் நினைவு மட்டும் என்னில் விடியலாகும்!</span><br><br>
+
+          அண்டவெளி எவ்வளவு பெரிதாய் இருந்தாலும்
+          உன் இதயம் அதை விட அகலமானது —<br>
+
+          <span class="hl">அந்த இதயத்தில் வாழும்</span><br>
+
+          <span class="hl">தங்கச்சி நான் — பேறு பெற்றவள்!</span> ✨
+        </div>
+
+        <div class="kavithai-sign">
+          — உன் தங்கச்சி, அன்போடு 💜
+        </div>
+      </div>
+
+      <!-- Poem 3 -->
+      <div class="kav" id="kav2">
+        <div class="kavithai-line">
+          சண்டை போட்டோம், ஊடல் கொண்டோம்,<br>
+
+          <span class="hl">ஆனால் அன்பை மட்டும் விட்டதில்லை!</span><br><br>
+
+          அக்கா என்ற வார்த்தையில்
+          ஆயிரம் பொருள்கள் ஒளிந்திருக்கின்றன —<br>
+
+          <span class="hl">அம்மா, தோழி, குருவி, காவலன்</span><br>
+
+          <span class="hl">எல்லாமே நீதான் என் அக்கா!</span> 💫
+        </div>
+
+        <div class="kavithai-sign">
+          — உன் தங்கச்சி, அன்போடு 💜
+        </div>
+      </div>
+
+      <!-- Poem 4 -->
+      <div class="kav" id="kav3">
+        <div class="kavithai-line">
+          இந்த பிறந்தநாளில் வானம் கேட்கிறது —<br>
+
+          <span class="hl">"சபரி பிரியாவுக்கு என்ன வேண்டும்?"</span><br><br>
+
+          நட்சத்திரங்கள் பதில் சொல்கின்றன:<br>
+
+          "அவளுக்கு சந்தோஷம் மட்டுமே வேண்டும்!" —<br>
+
+          <span class="hl">அந்த சந்தோஷத்தை தருவது</span><br>
+
+          <span class="hl">என் கடமை அக்கா, என்றென்றும்!</span> 🌌
+        </div>
+
+        <div class="kavithai-sign">
+          — உன் தங்கச்சி, அன்போடு 💜
+        </div>
+      </div>
+
+    </div>
+
+    <button class="btn" onclick="boom()">
+      🌌 அக்காவுக்கு surprise!
+    </button>
+
+    <div class="surprise-msg" id="smsg">
+      🎉 பிறந்தநாள் வாழ்த்துக்கள் அக்கா! 🎉<br><br>
+
+      எல்லா நட்சத்திரங்களையும் விட<br>
+      அதிகமாக உன்னை நேசிக்கிறேன்! 💜🌌<br><br>
+
+      <strong style="color:#c084fc;">
+        உன் வாழ்க்கை விண்வெளியைப் போல்<br>
+        எல்லையற்று ஒளிர்ந்திருக்கட்டும்! ⭐🚀
+      </strong>
+    </div>
+
+    <div class="footer">🌌 ⭐ 💫 🌟 🚀</div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
